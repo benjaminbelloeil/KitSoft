@@ -1,4 +1,4 @@
-# KitSoft - Full-Stack Application with Next.js, Vercel Auth, and Vercel Database
+# KitSoft - Full-Stack Application
 
 KitSoft is a modern full-stack web application built with **Next.js**, **Vercel Authentication**, and **Vercel Database** for managing tasks, tracking performance, and enabling real-time collaboration.
 
