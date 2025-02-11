@@ -1,4 +1,4 @@
-# KitSoft - Full-Stack Application
+# KitSoft - Full-Stack Application with Next.js, Vercel Auth, and Vercel Database
 
 KitSoft is a modern full-stack web application built with **Next.js**, **Vercel Authentication**, and **Vercel Database** for managing tasks, tracking performance, and enabling real-time collaboration.
 
@@ -60,19 +60,25 @@ Ensure you have the following installed:
 
 ## Deployment on Vercel
 1. Push your code to a GitHub repository.
-2. Connect the repository to your Vercel account.
-3. Set environment variables in the Vercel dashboard.
-4. Deploy the project with a single click.
+2. Go to the [Vercel Dashboard](https://vercel.com/dashboard) and click **New Project**.
+3. Import your GitHub repository.
+4. Configure the project settings and add your environment variables (`NEXTAUTH_URL`, `NEXTAUTH_SECRET`, `DATABASE_URL`).
+5. Click **Deploy** and Vercel will build and deploy your project automatically.
+6. Once deployed, your project will be available at `https://your-project-name.vercel.app`.
 
 ---
 
-## Database Setup (Vercel Database)
-1. Go to your Vercel dashboard and create a new **Vercel Database**.
-2. Set up your schema and tables.
-3. Add your `DATABASE_URL` to the environment variables in Vercel.
-4. Use the Vercel Database client in your app for querying and managing data.
+## Database Setup and Usage (Vercel Database)
+Vercel Database is a scalable and serverless solution for managing structured data. It works seamlessly with your Next.js application.
 
-### Example Query with Vercel Database:
+### Setting Up Vercel Database
+1. Go to your [Vercel Dashboard](https://vercel.com/dashboard) and create a new **Vercel Database**.
+2. Configure your schema and create the required tables for your application.
+3. Add the `DATABASE_URL` provided by Vercel Database to your environment variables.
+
+### Querying the Database
+Vercel Database provides an easy-to-use API for querying data. Here’s an example:
+
 ```javascript
 import { db } from '@vercel/database';
 
@@ -81,3 +87,8 @@ const getData = async () => {
   return result.rows;
 };
 ```
+
+### Database Features
+- **Serverless and Scalable:** Automatically scales based on demand.
+- **Low Latency:** Optimized for fast queries.
+- **Seamless Integration:** Works natively with Vercel and Next.js.
